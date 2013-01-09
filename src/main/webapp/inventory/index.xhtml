@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
@@ -23,14 +23,14 @@
                 </p:layoutUnit>
 
                 <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
-                    &copy; 2013 Catapult International, LLC
+                    &#169; 2013 Catapult International, LLC
                 </p:layoutUnit>
 
                 <p:layoutUnit position="west" size="175" resizable="true">
                     <h:form>
                         <p:menu>
                             <p:menuitem>
-                                
+                                <h:commandLink value="New Item" action="create?faces-redirect=true"/>
                             </p:menuitem>
                             <p:menuitem value="Documentation" url="http://www.primefaces.org/documentation.html" />
                             <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
@@ -40,7 +40,10 @@
                 </p:layoutUnit>
 
                 <p:layoutUnit position="center">
-                    Welcome to PrimeFaces
+                    <p:messages/>
+                    <div>
+                        Welcome to PrimeFaces
+                    </div>
                 </p:layoutUnit>
 
             </p:layout>
