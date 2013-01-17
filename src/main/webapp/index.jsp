@@ -1,17 +1,20 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:set var="resPath" value="${pageContext.request.contextPath}/resources"/>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Test Page</title>
-        <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-        <script src="js/bootstrap/js/bootstrap.min.js"></script>
+        <link href="${resPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="${resPath}/bootstrap/js/bootstrap.min.js"></script>
 
         <style>
             body {
                 padding-top: 60px;
             }
         </style>
-        <link href="js/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+        <link href="${resPath}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/>
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">

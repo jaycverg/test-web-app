@@ -15,10 +15,16 @@
        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
 
     <mvc:annotation-driven/>
-    <context:annotation-config/>    
+    <mvc:resources location="/resources/" mapping="/resources/**"/>
+    
     <context:component-scan base-package="com.catapult.web.spring"/>
     
     <lang:groovy id="testGroovyController" 
                  script-source="classpath:groovy/controller/TestGroovyController.groovy"/>
-
+    
+    <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 </beans>

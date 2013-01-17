@@ -1,0 +1,25 @@
+/* 
+    Document   : default
+    Created on : Jan 17, 2013, 4:30:50 PM
+    Author     : jvergara <jvergara@gocatapult.com>
+    Description:
+        default page style sheet
+*/
+
+body {
+    padding-top: 60px;
+}
+
+.icon {
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    -webkit-opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.icon-white {
+    opacity: 1;
+    -moz-opacity: 1;
+    -webkit-opacity: 1;
+    filter: alpha(opacity=100);
+}
