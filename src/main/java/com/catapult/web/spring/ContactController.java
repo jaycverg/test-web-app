@@ -2,6 +2,7 @@ package com.catapult.web.spring;
 
 import com.catapult.component.contact.IContactService;
 import com.catapult.model.Contact;
+import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,7 +35,13 @@ public class ContactController
             return "contact/index";
         }
         
+        service.create(contact);
         return "redirect:/contact?success";
     }
     
+    @ModelAttribute("list")
+    public List<Contact> getList()
+    {
+        return service.getList();
+    }
 }
