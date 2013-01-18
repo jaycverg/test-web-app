@@ -1,6 +1,6 @@
-package com.catapult.component.contact;
+package com.catapult.contact.component;
 
-import com.catapult.model.Contact;
+import com.catapult.contact.model.Contact;
 import java.util.List;
 
 /**

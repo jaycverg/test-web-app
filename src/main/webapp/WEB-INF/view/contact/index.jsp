@@ -31,7 +31,7 @@
         </div>
         <div class="container">
             <div class="span4">
-                <form:form cssClass="form" method="POST"
+                <form:form method="POST" cssClass="form"
                            modelAttribute="contact"
                            action="${ctxPath}/contact">
                     

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
+import org.springframework.web.bind.annotation.ResponseBody
 
 /**
  *
@@ -19,9 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod
 class TestGroovyController 
 {
 	@RequestMapping(method=RequestMethod.GET)
-    void serve(HttpServletResponse resp) throws Exception
+    @ResponseBody String serve() throws Exception
     {        
-        resp.writer.write "hello world from groovy controller!"
+        return "hello world from groovy controller!"
     }
 }
 

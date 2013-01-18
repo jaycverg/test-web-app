@@ -1,4 +1,4 @@
-package com.catapult.model;
+package com.catapult.contact.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
 

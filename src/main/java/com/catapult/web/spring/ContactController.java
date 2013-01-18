@@ -1,7 +1,7 @@
 package com.catapult.web.spring;
 
-import com.catapult.component.contact.IContactService;
-import com.catapult.model.Contact;
+import com.catapult.contact.component.IContactService;
+import com.catapult.contact.model.Contact;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
