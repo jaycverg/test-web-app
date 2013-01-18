@@ -5,7 +5,7 @@
 <c:set var="ctxPath" value="${pageContext.request.contextPath}"/>
 
 <div id="${param.id}" 
-     class="modal hide" 
+     class="modal hide fade" 
      role="dialog"
      aria-labelledby="contact-info-title">
 
