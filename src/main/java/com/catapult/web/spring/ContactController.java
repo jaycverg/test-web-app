@@ -25,14 +25,14 @@ public class ContactController
     @RequestMapping(method=RequestMethod.GET)
     public String viewContactForm(@ModelAttribute("contact") Contact contact)
     {
-        return "contact/index";
+        return "contact/default";
     }
     
     @RequestMapping(method=RequestMethod.POST)
     public String saveContact(@Valid Contact contact, BindingResult result)
     {
         if (result.hasErrors()) {
-            return "contact/index";
+            return "contact/default";
         }
         
         service.create(contact);
