@@ -44,7 +44,7 @@
     <!-- bind your messages.properties -->
     <bean class="org.springframework.context.support.ResourceBundleMessageSource"
           id="messageSource">
-        <property name="basename" value="META-INF/messages" />
+        <property name="basename" value="META-INF/error_messages" />
     </bean>
     
 </beans>
