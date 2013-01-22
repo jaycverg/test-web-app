@@ -6,6 +6,7 @@ import com.catapult.contact.model.JsonResponse;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -26,6 +27,10 @@ public class ContactAjaxController
 
     @Autowired
     private IContactService service;
+    
+    @Autowired
+    private MessageSource messageSource;
+    
 
     @RequestMapping(method=RequestMethod.GET)
     public String viewContactForm(@ModelAttribute("contact") Contact contact)
@@ -34,14 +39,15 @@ public class ContactAjaxController
     }
 
     @RequestMapping(method=RequestMethod.POST)
-    public @ResponseBody JsonResponse saveContact(@Valid Contact contact, BindingResult result)
+    @ResponseBody
+    public JsonResponse saveContact(@Valid Contact contact, BindingResult result)
     {
         JsonResponse resp = new JsonResponse();
         if (result.hasErrors()) {
             StringBuilder sb = new StringBuilder();
             for (FieldError err : result.getFieldErrors()) {
                 if (sb.length() > 0) sb.append("<br/>");
-                sb.append(err.getDefaultMessage());
+                sb.append(messageSource.getMessage(err, null));                
             }
             resp.setMessage(sb.toString());
             resp.setError(true);
@@ -58,7 +64,8 @@ public class ContactAjaxController
     }
     
     @RequestMapping(value="/{id}",method=RequestMethod.GET)
-    public @ResponseBody JsonResponse getContact(@PathVariable Long id)
+    @ResponseBody
+    public JsonResponse getContact(@PathVariable Long id)
     {
         JsonResponse resp = new JsonResponse();
         resp.setResult(service.read(id));

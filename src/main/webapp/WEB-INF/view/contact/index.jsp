@@ -9,7 +9,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Test Page</title>
-        <link href="${resPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="${resPath}/bootstrap/css/bootstrap-cerulean.min.css" rel="stylesheet"/>
         <link href="${resPath}/css/default.css" rel="stylesheet"/>
         <link href="${resPath}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/>
         <script src="${resPath}/js/jquery-1.8.3.js"></script>
@@ -18,7 +18,7 @@
         <script src="${resPath}/js/app-contact.js"></script>
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <a href="#" class="brand">Contact Mangement</a>

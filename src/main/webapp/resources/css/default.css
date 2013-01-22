@@ -18,10 +18,6 @@ body {
     filter: alpha(opacity=60);
 }
 
-.brand {
-    color: #ddd !important;
-}
-
 .a-center { text-align: center !important; }
 .a-left   { text-align: left !important; }
 .a-right  { text-align: right !important; }

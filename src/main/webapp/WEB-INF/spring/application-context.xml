@@ -12,7 +12,6 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
     
-    <context:annotation-config/>    
     <context:component-scan base-package="com.catapult.component"/>
     <context:component-scan base-package="com.catapult.*.component"/>
     <context:component-scan base-package="com.catapult.web.jsf"/>
