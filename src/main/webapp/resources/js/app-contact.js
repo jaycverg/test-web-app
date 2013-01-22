@@ -7,9 +7,9 @@
 //init script
 $(function(){ init(); });
 
-function init()
+function init(selector)
 {
-    $('a[data-action]')
+    $('a[data-action]', selector || document)
     .click(function(){
         eval( $(this).data('action') );
         return false;

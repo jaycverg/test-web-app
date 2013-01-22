@@ -11,11 +11,11 @@ public class Contact
 
     private Long id;
     
-    @NotEmpty(message="Contact name should not be empty")
+    @NotEmpty
     private String name;
     private String address;
     
-    @NotEmpty(message="Contact number should not be empty")
+    @NotEmpty
     private String contactNo;
 
     /**
